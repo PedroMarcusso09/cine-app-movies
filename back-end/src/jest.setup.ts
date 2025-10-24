@@ -1,5 +1,5 @@
-import { prisma } from "./src/config/prisma";
-import { server } from "./src/index";
+import { prisma } from "../src/config/prisma";
+import { server } from "../src/index";
 
 beforeAll(() => {
   jest.spyOn(console, "error").mockImplementation(() => {});
