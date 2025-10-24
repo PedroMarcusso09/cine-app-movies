@@ -4,7 +4,7 @@ import type { Movie } from "../types";
 const baseURL =
   import.meta.env.MODE === "development"
     ? "http://localhost:4000/api"
-    : "https://cine-app-movies.onrender.com/";
+    : "https://cine-app-movies.onrender.com/api";
 
 export const api = axios.create({ baseURL });
 
