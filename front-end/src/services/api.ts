@@ -1,9 +1,12 @@
 import axios from "axios";
 import type { Movie } from "../types";
 
-export const api = axios.create({
-  baseURL: "http://localhost:4000/api",
-});
+const baseURL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:4000/api"
+    : "https://cine-app-movies.onrender.com/";
+
+export const api = axios.create({ baseURL });
 
 export const moviesService = {
   async search(query: string) {
