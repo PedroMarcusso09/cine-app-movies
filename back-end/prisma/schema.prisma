@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Favorite {
+  id           Int        @id @default(autoincrement())
+  tmdbId       Int
+  title        String
+  overview     String?
+  poster       String?
+  rating       Float?
+  releaseDate  String?
+  createdAt    DateTime   @default(now())
+
+  sharedList   SharedList? @relation(fields: [sharedListId], references: [id])
+  sharedListId String?
+}
+
+model SharedList {
+  id        String     @id
+  createdAt DateTime   @default(now())
+  favorites Favorite[]
+}
+
