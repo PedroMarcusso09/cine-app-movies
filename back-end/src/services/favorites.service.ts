@@ -34,9 +34,12 @@ export const favoritesService = {
 
     const shareId = randomUUID();
     await favoritesRepository.createSharedList(shareId, favorites);
+    const baseUrl =
+      process.env.FRONTEND_URL || "http://localhost:5173";
+
     return {
       message: "Link gerado com sucesso!",
-      link: `http://localhost:5173/shared/${shareId}`,
+      link: `${baseUrl}/shared/${shareId}`,
     };
   },
 
