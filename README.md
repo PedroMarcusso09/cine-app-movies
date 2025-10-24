@@ -3,6 +3,11 @@
 
 Uma aplicação web full stack que consome uma API pública de filmes, permitindo ao usuário visualizar, favoritar e compartilhar listas de filmes favoritos.
 
+## 🌐 Deploy
+
+🔗 **Acesse o projeto online:**  
+[https://cine-app-movies-1.onrender.com](https://cine-app-movies-1.onrender.com)
+
 ## 🚀 Funcionalidades
 
 - Listagem de filmes a partir da API pública
